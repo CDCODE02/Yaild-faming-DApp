@@ -48,7 +48,7 @@ function depositTokens(uint _amount) public {
     require(msg.sender == owner, 'the caller must be the owner');
       for (uint i=0; i<stakers.length; i++) {
         address recipient = stakers[i];
-        uint balance = stakingBalance[recipient];
+        uint balance = stakingBalance[recipient] / 9; // /9 to create percentage incentive for stakers
         if(balance > 0) {
         rwd.transfer(recipient, balance);
         }
