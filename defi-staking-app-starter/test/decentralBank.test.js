@@ -97,4 +97,5 @@ contract("DecentralBank", ([owner, customer]) => {
       );
     });
   });
+  
 });
